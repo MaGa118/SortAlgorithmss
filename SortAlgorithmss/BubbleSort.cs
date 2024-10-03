@@ -8,26 +8,27 @@ namespace SortingAlgorithms
 {
     internal class BubbleSort
     {
-        public static void Perform(List<double> listToSort)
-        {
-            bool swapped = true;
-            double temp;
-
-            while (swapped)
+            public static void Perform(List<double> listToSort)
             {
-                swapped = false;
+                bool swapped = true;
+                double temp;
 
-                for (int i = 0; i < listToSort.Count - 1; i++)
+                while (swapped)
                 {
-                    if (listToSort[i] > listToSort[i + 1])
+                    swapped = false;
+
+                    for (int i = 0; i < listToSort.Count - 1; i++)
                     {
-                        temp = listToSort[i];
-                        listToSort[i] = listToSort[i + 1];
-                        listToSort[i + 1] = temp;
-                        swapped = true;
+                        if (listToSort[i] > listToSort[i + 1])
+                        {
+                            temp = listToSort[i];
+                            listToSort[i] = listToSort[i + 1];
+                            listToSort[i + 1] = temp;
+                            swapped = true;
+                        }
                     }
                 }
             }
-        }
+        
     }
 }

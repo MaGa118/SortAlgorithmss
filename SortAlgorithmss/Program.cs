@@ -21,10 +21,19 @@ namespace SortingAlgorithms
             mainMenu.AddMenuItem("Randomise List of Doubles (10 Values)", "TenDoubles", typeof(Program));
             mainMenu.AddMenuItem("Print List of Doubles", "PrintListOfDoubles", typeof(Program));
             mainMenu.AddMenuItem("Perform a Bubble Sort", "PerformBubble", typeof(Program));
+            mainMenu.AddMenuItem("Perform a Quick Sort", "PerformQuickSort", typeof(Program));
 
             mainMenu.RunForever();
 
             Console.ReadKey();
+        }
+        public static void PerformQuickSort()
+        {
+            Console.WriteLine("Performing Quick Sort...");
+
+            QuickSort.Perform(listOfDoubles);
+
+            Console.WriteLine("Sort Completed");
         }
 
         public static void PerformBubble()
